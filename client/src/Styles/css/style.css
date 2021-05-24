@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HOME PAGE */
+.homePageContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.homePageLogo {
+  position: relative;
+  background-color: #1DA1F2;
+  width: 100%;
+}
+
+.homePageLogo svg:nth-child(1) {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: 400px;
+  color: white;
+}
+
+.homePageTitle {
+  height: 100%;
+  min-width: 45vw;
+}
+
+.homePageTitleContent {
+  margin-left: 40px;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+}
+
+.homePageTitleContent svg {
+  font-size: 70px;
+  color: #1DA1F2;
+}
+
+.homePageTitleContent h1 {
+  margin-top: 60px;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.homePageTitleContent p {
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.homePageButton {
+  background-color: #1DA1F2;
+  position: relative;
+  width: 380px;
+  height: 50px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.homePageButton a {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: white;
+}
+
+.homePageButton:hover {
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.homePageLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.homePageLinks div:nth-child(2) {
+  background-color: white;
+  border: 1px solid #1DA1F2;
+}
+
+.homePageLinks div:nth-child(2) a {
+  color: #1DA1F2;
+}
+
+/* MODAL */
+.homePageModal {
+  z-index: 100;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 650px;
+  width: 600px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.homePageModalWrapper {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.homePageOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 90;
+}
+
+.homePageHeader {
+  margin-top: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homePageHeader svg {
+  color: #1DA1F2;
+  font-size: 40px;
+}
+
+.homePageHeader button {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #1DA1F2;
+  padding: 5px 15px;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.homePageContent form {
+  width: 100%;
+}
+
+.formHeader p {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.formInputs {
+  margin-top: 30px;
+  position: relative;
+}
+
+.formInputs label {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 10px;
+  top: 50%;
+  color: #5b7083;
+  font-size: 17px;
+  font-weight: 400;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.formInputs input:focus {
+  border: 2px solid #1DA1F2;
+}
+
+.formInputs input:focus + label {
+  color: #1DA1F2;
+}
+
+.formInputs input:focus + label, .formInputs input:not(:placeholder-shown) + label {
+  font-size: 15px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.formInputs input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.formInputs input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.formInputs input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.formInputs input::placeholder {
+  color: transparent;
+}
+
+.formInputs span {
+  color: #1b95e0;
+  cursor: pointer;
+}
+
+.formInputs span:hover {
+  text-decoration: underline;
+}
+
+.formInput {
+  outline: none;
+  height: 60px;
+  width: 100%;
+  border: 1px solid #C4CFD6;
+  border-radius: 5px;
+  padding: 0 10px;
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 17px;
+}
+
+.formInputDate p {
+  position: relative;
+  left: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+}
+
+.formInputDate span {
+  font-weight: 400;
+  color: #5b7083;
+}
+
+.formInputDate input {
+  margin-top: 15px;
+}
+
+.formInputsSelect {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+}
+
+.formInputsSelectInput {
+  margin-top: 30px;
+  position: relative;
+}
+
+.formInputsSelectInput label {
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  left: 10px;
+  top: 50%;
+  color: #5b7083;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+/* */
+/* */
+@media screen and (max-width: 1600px) {
+  .homePageTitle {
+    min-width: 60vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
