@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
                             <h1>В курсе происходящего</h1>
                             <p>Присоединяйтесь к Твиттеру прямо сейчас!</p>
                             <div className='homePageLinks'>
-                                <div className='homePageButton' onClick={() => setModal('default')}><a href='/#'>Зарегестрироваться</a></div>
+                                <div className='homePageButton' onClick={() => setModal('register')}><a href='/#'>Зарегестрироваться</a></div>
                                 <div className='homePageButton'><a href='/#'>Войти</a></div>
                             </div>
                         </div>

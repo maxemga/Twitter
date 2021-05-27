@@ -143,7 +143,7 @@ a {
   z-index: 90;
 }
 
-.homePageHeader {
+.homePageHeaderModal {
   margin-top: 10px;
   position: relative;
   display: -webkit-box;
@@ -154,12 +154,27 @@ a {
           justify-content: center;
 }
 
-.homePageHeader svg {
+.homePageHeaderModal svg:nth-child(1) {
+  position: absolute;
+  left: 0;
+  color: #1DA1F2;
+  font-size: 30px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.homePageHeaderModal svg:nth-child(2) {
   color: #1DA1F2;
   font-size: 40px;
 }
 
-.homePageHeader button {
+.homePageHeaderModal p {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.homePageNextButton {
   position: absolute;
   right: 0;
   top: 5px;
@@ -172,6 +187,10 @@ a {
   color: white;
   font-size: 15px;
   font-weight: 800;
+}
+
+.homePageNextButtonError {
+  opacity: 0.5;
 }
 
 .homePageContent form {
@@ -188,6 +207,14 @@ a {
   position: relative;
 }
 
+.formInputs p {
+  position: relative;
+  left: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+}
+
 .formInputs label {
   position: absolute;
   -webkit-transform: translateY(-50%);
@@ -199,38 +226,6 @@ a {
   font-weight: 400;
   -webkit-transition: .1s;
   transition: .1s;
-}
-
-.formInputs input:focus {
-  border: 2px solid #1DA1F2;
-}
-
-.formInputs input:focus + label {
-  color: #1DA1F2;
-}
-
-.formInputs input:focus + label, .formInputs input:not(:placeholder-shown) + label {
-  font-size: 15px;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: .1s;
-  transition: .1s;
-}
-
-.formInputs input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.formInputs input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.formInputs input::-ms-input-placeholder {
-  color: transparent;
-}
-
-.formInputs input::placeholder {
-  color: transparent;
 }
 
 .formInputs span {
@@ -255,12 +250,94 @@ a {
   font-size: 17px;
 }
 
-.formInputDate p {
-  position: relative;
-  left: 0;
+.formInput:focus {
+  border: 2px solid #1DA1F2;
+}
+
+.formInput:focus + label {
+  color: #1DA1F2;
+}
+
+.formInput:focus + label, .formInput:not(:placeholder-shown) + label {
   font-size: 15px;
-  font-weight: 700;
-  color: black;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.formInput::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.formInput:-ms-input-placeholder {
+  color: transparent;
+}
+
+.formInput::-ms-input-placeholder {
+  color: transparent;
+}
+
+.formInput::placeholder {
+  color: transparent;
+}
+
+.formInputError {
+  outline: none;
+  height: 60px;
+  width: 100%;
+  border: 1px solid #E0245E;
+  border-radius: 5px;
+  padding: 0 10px;
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 17px;
+}
+
+.formInputError + label {
+  color: #E0245E;
+}
+
+.formInputError:focus {
+  border: 2px solid #E0245E;
+}
+
+.formInputError:focus + label {
+  color: #E0245E;
+}
+
+.formInputError:focus + label, .formInputError input:not(:placeholder-shown) + label {
+  font-size: 15px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.formInputError::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.formInputError:-ms-input-placeholder {
+  color: transparent;
+}
+
+.formInputError::-ms-input-placeholder {
+  color: transparent;
+}
+
+.formInputError::placeholder {
+  color: transparent;
+}
+
+.formInputsError {
+  margin-bottom: 20px;
+}
+
+.formInputsError span {
+  color: #E0245E;
+  font-size: 15px;
 }
 
 .formInputDate span {
@@ -283,7 +360,6 @@ a {
 }
 
 .formInputsSelectInput {
-  margin-top: 30px;
   position: relative;
 }
 
@@ -298,6 +374,92 @@ a {
   font-weight: 400;
   -webkit-transition: .1s;
   transition: .1s;
+}
+
+.formInputsPolitics {
+  margin-top: 100px;
+}
+
+.formInputsPolitics p {
+  font-weight: 400;
+  font-size: 15px;
+  color: #0f1419;
+}
+
+.formInputsPolitics span {
+  color: #1b95e0;
+}
+
+.formInputsValidate span {
+  margin-left: 10px;
+  font-size: 13px;
+  color: #1b95e0;
+}
+
+.formInputsValidate span:hover {
+  text-decoration: underline;
+}
+
+.formInputsCode {
+  color: #5b7083;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.formInputsCode span {
+  margin-left: 10px;
+  color: #1b95e0;
+  font-size: 13px;
+}
+
+.formInputsCode span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.homePageModalContentTitle h2 {
+  font-size: 20px;
+}
+
+.homePageContentFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homePageContentFlex p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.homePageModalContentFooter {
+  margin-top: 40px;
+}
+
+.homePageModalContentFooter p {
+  color: #5b7083;
+  font-size: 15px;
+}
+
+.homePageModalContentFooter span {
+  color: #1b95e0;
+  cursor: pointer;
+}
+
+.formInputsSubmit button {
+  padding: 15px 0;
+  cursor: pointer;
+  color: white;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #1DA1F2;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 /* */

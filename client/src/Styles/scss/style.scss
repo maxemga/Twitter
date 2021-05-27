@@ -128,31 +128,50 @@ $colorBue: #1DA1F2;
     opacity: 0.3;
     z-index: 90;
 }
-.homePageHeader {
+.homePageHeaderModal {
     margin-top: 10px;
     position: relative;
     display: flex;
     justify-content: center;
     
-    svg {
+    svg:nth-child(1) {
+        position: absolute;
+        left: 0;
+        color: $colorBue;
+        font-size: 30px;
+        top: 5px;
+        cursor: pointer;
+    }
+    svg:nth-child(2) {
         color: $colorBue;
         font-size: 40px;
     }
-    button {
-        position: absolute;
-        right: 0;
-        top: 5px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        border-radius: 20px;
-        background-color: $colorBue;
-        padding: 5px 15px;
-        color: white;
-        font-size: 15px;
-        font-weight: 800;   
+    p {
+        margin: 5px 0;
+        font-size: 20px;
+        font-weight: 800;
     }
+
 }
+
+.homePageNextButton {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: $colorBue;
+    padding: 5px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: 800; 
+}
+.homePageNextButtonError {
+    opacity: 0.5;
+}
+
 .homePageContent {
     form {
         width: 100%;
@@ -165,7 +184,15 @@ $colorBue: #1DA1F2;
         font-weight: 700;
     }
 }
+
 .formInputs {
+    p {
+        position: relative;
+        left: 0;
+        font-size: 15px;
+        font-weight: 700;
+        color: black;
+    }
     margin-top: 30px;
     position: relative;
     
@@ -179,37 +206,16 @@ $colorBue: #1DA1F2;
         font-weight: 400;  
         transition: .1s;
     }
-    input:focus{
-        border: 2px solid $colorBue;       
-    }
-    
-    input:focus + label{
-        color:  $colorBue;       
-    }
-
-    input:focus, input:not(:placeholder-shown) {
-        
-    }
-    
-    input:focus + label, input:not(:placeholder-shown) + label {
-        font-size: 15px;
-        transform: translateY(-100%);
-        transition: .1s; 
-    }
-
-    
-    input::placeholder {
-        color: transparent;
-    }
-
     span {
         color: rgb(27, 149, 224);
         cursor: pointer;
         &:hover {
             text-decoration: underline;
         }
-    }
+    } 
+    
 }
+
 .formInput {
     outline: none;
     height: 60px;
@@ -219,19 +225,71 @@ $colorBue: #1DA1F2;
     padding: 0 10px;
     padding-top: 30px;
     box-sizing:border-box;   
-    font-size: 17px;   
+    font-size: 17px;
+
+    &:focus{
+        border: 2px solid $colorBue;       
+    }
+    
+    &:focus + label{
+        color:  $colorBue;       
+    }
+    
+    &:focus + label, &:not(:placeholder-shown) + label {
+        font-size: 15px;
+        transform: translateY(-100%);
+        transition: .1s; 
+    }
+
+    
+    &::placeholder {
+        color: transparent;
+    }  
+}
+.formInputError {
+    outline: none;
+    height: 60px;
+    width: 100%;
+    border: 1px solid #E0245E;
+    border-radius: 5px;
+    padding: 0 10px;
+    padding-top: 30px;
+    box-sizing:border-box;   
+    font-size: 17px; 
+    + label {
+       color: #E0245E  ;
+    }
+    &:focus{
+        border: 2px solid #E0245E;       
+    }
+    
+    &:focus + label{
+        color: #E0245E;       
+    }
+    
+    &:focus + label, input:not(:placeholder-shown) + label {
+        font-size: 15px;
+        transform: translateY(-100%);
+        transition: .1s; 
+    }
+
+    
+    &::placeholder {
+        color: transparent;
+    }
+ 
 }
 
-
+.formInputsError {
+    margin-bottom: 20px;
+    span {
+        color: #E0245E;
+        font-size: 15px;
+        
+    }
+}
 
 .formInputDate {
-    p {
-        position: relative;
-        left: 0;
-        font-size: 15px;
-        font-weight: 700;
-        color: black;
-    }
     span {
         font-weight: 400;
         color: rgb(91, 112, 131);
@@ -239,18 +297,18 @@ $colorBue: #1DA1F2;
     input {
         margin-top: 15px;
     }
+    
 }
 .formInputsSelect {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px 10px;
+   
     
 }
 .formInputsSelectInput {
-    margin-top: 30px;
     position: relative;
-    
     label {
         position: absolute;
         transform: translateY(-100%);
@@ -260,8 +318,90 @@ $colorBue: #1DA1F2;
         font-size: 15px;
         font-weight: 400;  
         transition: .1s;
+    }  
+}
+.formInputsPolitics {
+    margin-top: 100px;
+    p {
+        font-weight: 400;
+        font-size: 15px;
+        color: rgb(15, 20, 25);
+    }
+    span {
+        color: rgb(27, 149, 224);
     }
 }
+
+.formInputsValidate {
+    span {
+        margin-left: 10px;
+        font-size: 13px;
+        color: #1b95e0;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.formInputsCode {
+   
+    color: rgb(91, 112, 131);
+    font-size: 15px;
+    font-weight: 400;
+
+    span {
+        margin-left: 10px;
+        color: rgb(27, 149, 224);
+        font-size: 13px;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.homePageModalContentTitle {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.homePageContentFlex {
+    display: flex;
+    align-items: center;
+    p {
+        font-size: 15px;
+        margin: 0;
+    }
+}
+
+.homePageModalContentFooter {
+    margin-top: 40px;
+    p {
+        color: rgb(91, 112, 131);
+        font-size: 15px;
+    }
+    span {
+        color: rgb(27, 149, 224);
+        cursor: pointer;
+    }
+}
+
+.formInputsSubmit {
+    button {
+        padding: 15px 0;
+        cursor: pointer;
+        color: white;
+        border: none;
+        outline: none;
+        width: 100%;
+        border-radius: 30px;
+        background-color: $colorBue;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
 /* */
 
 /* */
