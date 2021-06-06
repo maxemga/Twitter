@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
 
     
     return(
-            <div className='homePageBlock'>
+        <div className='homePageBlock'>
             <div className='homePageWrapper'>
                 <div className='homePageContent'>
                     <div className='homePageLogo'>
@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
                             <p>Присоединяйтесь к Твиттеру прямо сейчас!</p>
                             <div className='homePageLinks'>
                                 <div className='homePageButton' onClick={() => setModal('register')}><a href='/#'>Зарегестрироваться</a></div>
-                                <div className='homePageButton'><a href='/#'>Войти</a></div>
+                                <div className='homePageButton' onClick={() => setModal('login')}><a href='/#'>Войти</a></div>
                             </div>
                         </div>
                     </div>
